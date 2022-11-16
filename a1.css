@@ -110,8 +110,6 @@ nav a {
 
 /*Aqui terminei de estilizar o meu header*/
 
-
-
 #up {
     display: flex;
     justify-items: center;
@@ -149,7 +147,6 @@ nav a {
 }
 
 
-
 /*------------------------------------------*/
 
 
@@ -165,7 +162,6 @@ nav a {
    
 }
 
-
 #down ul {
     display:flex;
     justify-content: space-between;
@@ -176,4 +172,13 @@ nav a {
 
     padding: 10px 30px;
     
+}
+
+main > div 
+.container-main1 {
+    background-color: #ffffff;
+}
+
+.container-main2 {
+    background-color: #000000;
 }
