@@ -1,0 +1,136 @@
+/*Aqui comecei por resetar o meu documento html e o meu body*/
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #7159c1;
+}
+
+/*Aqui terminei de resetar o meu documento html e o meu body*/
+
+/*Var Section*/
+:root {
+    --color-header-text: rgba(255, 255, 255, 0.7);
+    --color-bg-header: rgb(39 43 51);
+}
+/*End Var Section*/
+
+/*Aqui comecei a estilizar o meu header*/
+header {
+    display: flex;
+    grid-area: header;
+    padding: 16px 32px;
+    font-size: 14px;
+    background: var(--color-bg-header);
+    color: var(--color-header-text);
+    
+     
+}
+
+header > .header1 {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    margin-right: 35em;
+
+}
+
+.search {
+    display: flex; 
+    padding: 0px 12px;
+    width: 270px; 
+    
+}
+
+.search svg {
+    margin-left: -25px;
+    justify-self: center;
+    align-self: center;
+    width: 23px;
+   
+}
+
+.search input {
+    width: 250px;
+    padding: 3px 12px;
+    font-size: 14px;
+    background: #0A0C10;border-radius: 5px;
+    border: 1px solid rgba(172, 170, 170, 0.569);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #fff;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 350px ;
+    margin-left: 10px;
+}
+
+nav > div  {
+    display: flex;
+    
+    
+}
+nav a {
+    list-style-type: none;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.header-float-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+        
+}
+
+.header-float-right > div {
+    display: flex;
+    width: 38px;
+    
+}
+
+.header-img-profile img{
+    display: Flex; 
+    width: 24px;
+    height: 24px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+
+/*Aqui terminei de estilizar o meu header*/
+
+
+
+
+
+
+
+
+
+
+/*------------------------------------------*/
+
+main {
+    background: blue;
+    grid-area: main;
+
+}
+
+aside {
+    background: green;
+    grid-area: aside;
+
+    
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 20vh 80vh;
+    grid-template-areas: 
+    "header header"
+    "main aside"
+}
