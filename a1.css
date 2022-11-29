@@ -3,7 +3,7 @@ html, body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: var(--color-bg);
+    background: var(--cor-body);
 
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
@@ -12,13 +12,23 @@ html, body {
 
 /*Var Section*/
 :root {
-    --color-bg: #0A0C10;
-    --color-header: #272B33;
+    --cor-body: #0A0C10;
+    --cor-menu: #272B33;
+    --cor-text-menu: #ffffff;
+
+    --cor-btn-bg: #272B33;
+    --cor-btn-border: #7A828E;
+    --cor-btn-text: #F0F3F6;
+
+    --cor-line-orange: #FF967D;
+
+    --color-main-bg: ;
+    --color-main-border: #7A828E;
     --color-btn-code: #09B43A;
     --color-btn-code-bg: #12d349;
-    --color-header1-text: #ffffff;
-    --color-main-text: #F0F3F6;
+
     --color-link: #71B7FF;
+
     --color-btn-hover-border: #BDC4CC;
     --color-btn-hover-bg: #525964;
     --color-border: #525964;
@@ -28,10 +38,10 @@ html, body {
 /*Aqui comecei a estilizar o meu header*/
 #primeiro {
     display: flex;
-    padding: 16px 32px;
+    padding: 12px 32px;
     
-    background: var(--color-header);
-    color: var(--color-header1-text);
+    background: var(--cor-menu);
+    color: var(--cor-text-menu);
     
     font-size: 13px;
     font-weight: bold;
@@ -65,11 +75,11 @@ html, body {
     width: 250px;
     padding: 3px 12px;
     font-size: 14px;
-    background: var(--color-bg);
+    background: var(--cor-body);
     border-radius: 5px;
-    border: 1px solid var(--color-border);
+    border: 1px solid var(--cor-btn-border);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: var(--color-header1-text);
+    color: var(--cor-text-menu);
 }
 
 nav {
@@ -87,7 +97,7 @@ nav > div  {
 
 nav a {
     list-style-type: none;
-    color: var(--color-header1-text);
+    color: var(--cor-text-menu) ;
     text-decoration: none;
 }
 
@@ -109,15 +119,10 @@ nav a {
     display: Flex; 
     width: 24px;
     height: 24px;
-    border: 1px solid var(--color-header1-text);
+    border: 1px solid var(--cor-text-menu);
     border-radius: 50%;
 }
 
-#line {
-    border: 1px solid var(--color-btn-hover-border);
-    margin-top: -15px;
-    opacity: 50%;
-}
 
 /*Aqui terminei de estilizar o meu header*/
 
@@ -127,11 +132,13 @@ nav a {
     align-items: center;
     
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    margin-bottom: 20px;
 }
 
 .esquerda {
     margin-left: 30px;
-    color: var(--color-header1-text);
+    color: var(--cor-btn-text);
 }
 
 .esquerda a {
@@ -148,7 +155,7 @@ nav a {
     font-size: 11px;
 
     border-radius: 20px;
-    border: 1px solid var(--color-header1-text);
+    border: 1px solid var(--cor-btn-border);
 
     font-weight: bolder;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -166,8 +173,6 @@ nav a {
     width: 390px;
     list-style: none;
     justify-content: space-between;
-
-    border: 1px solid #12d349;
     padding: 2px 0px;
 }
 
@@ -180,14 +185,14 @@ nav a {
     padding: 5px;
 
     border-radius: 7px;
-    border: 1px solid var(--color-border);
+    border: 1px solid var(--cor-btn-border);
 
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 12px;
     font-weight: bold;
 
-    color: var(--color-main-text);
-    background: var(--color-header);
+    color: var(--cor-btn-text);
+    background: var(--cor-btn-bg);
 }
 
 
@@ -199,8 +204,7 @@ nav a {
     justify-content: flex-start;
     align-items: center;
 
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;  
 }
 
 #down nav {
@@ -215,9 +219,10 @@ nav a {
     list-style: none;
     width: 90%;
 
-    padding: 10px 40px;
-    color: var(--color-main-text);
+    padding: 0px 25px;
+    margin: 0px;
 
+    color: var(--cor-btn-text);
     font-size: 14px;
 }
 
@@ -226,6 +231,12 @@ nav a {
     justify-content: space-between;
     align-items: center;
     padding: 0px 10px;
+}
+
+.line-orange {
+    padding-bottom: 10px;
+    margin-bottom: 0.1px;
+    border-bottom: 2px solid var(--cor-line-orange);
 }
 
 #down svg {
@@ -238,7 +249,7 @@ main {
     margin: 0px;
     padding: 24px 100px;
     height: auto;
-    border: 1px solid #00ffa6 ;   
+    border-top: 1px solid var(--cor-btn-border); 
 }
 
 #grid {
@@ -264,7 +275,6 @@ main {
     display: flex;
     width: 35%; 
     
-    border: 2px solid #09B43A;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -283,7 +293,7 @@ main {
     justify-self: space-between;
     align-items: center;
     text-decoration: none; 
-    color: var(--color-main-text);
+    color: var(--cor-btn-text);
     margin-left: 10px;
 }
 
@@ -292,16 +302,16 @@ main {
 }
 
 #a-principal {
-    background: var(--color-header);
+    background: var(--cor-btn-bg);
     padding: 5px 16px 5px 0px;
    
-    border: 1px solid var(--color-border);
+    border: 1px solid var(--cor-btn-border);
     border-radius: 7px;
 }
 
 #a-principal:hover {
-    background: var(--color-btn-hover-bg);
-    border: 1px solid var(--color-btn-hover-border);
+    background: var(--cor-btn-bg);
+    border: 1px solid var(--cor-btn-border);
 }
 
 .main-direita {
@@ -316,11 +326,11 @@ main {
 }
 
 .main-direita a {
-    border: 1px solid var(--color-border);
+    border: 1px solid var(--cor-btn-border);
     display: flex;
-    color: var(--color-header1-text);
+    color: var(--cor-btn-text);
     text-decoration: none;
-    background: var(--color-header);
+    background: var(--cor-btn-bg);
     padding: 5px 14px;
     border-radius: 7px;
     
@@ -337,7 +347,8 @@ main {
     align-items: center;
     margin-right: 0px;
     background: var(--color-btn-code);
-    color: var(--color-bg);
+    color: var(--cor-body);
+
 }
 
 #codigo svg {
@@ -346,6 +357,202 @@ main {
 
 #codigo:hover {
     background: var(--color-btn-code-bg);
+}
+
+
+.box1 {
+    display: grid;
+    grid-column: 1/4;
+    grid-row: 2/3;
+
+    border-radius: 7px;
+    border: 1px solid var(--cor-btn-border);
+}
+
+.box1 img {
+    display: Flex; 
+    width: 24px;
+    height: 24px;
+  
+    border: none;
+    border-radius: 50%;
+    
+    margin-right: 10px;
+}
+
+.a1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-radius: 7px 7px 0px 0px;
+    background: var(--cor-btn-bg);
+
+    padding: 0px 5px;
+}
+
+.esquerda-a1 {
+   font-size: 14px;
+}
+
+.esquerda-a1 ul {
+    display: flex;
+    list-style: none;
+    
+    margin: 0px;
+    padding: 5px;
+    
+}
+
+.esquerda-a1 a {
+    display: flex;
+    text-decoration: none;
+    margin-right: 7px;
+    color: var(--cor-btn-text);
+    padding: 0px;
+    margin: 0px 4px;
+}
+
+.direita-a1 {
+    font-size: 14px;
+    padding: 0px;
+    margin:0px;
+ }
+ 
+ .direita-a1 ul {
+     display: flex;
+     list-style: none;
+
+     margin: 0px;
+     padding: 5px;
+     
+ }
+ 
+ .direita-a1 a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin-right: 7px;
+    color: var(--cor-btn-text);
+    padding: 0px;
+    margin: 0px 4px;
+ }
+
+ .direita-a1 svg {
+  
+    margin: 0px 4px;
+ }
+
+
+.a2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    border: 1px solid var(--cor-btn-border);
+
+    font-size: 13px;
+    
+}
+
+.a2:hover {
+    background: var(--cor-btn-bg);
+}
+
+.a2 ul{
+   
+    list-style: none;
+    padding: 0px 10px;
+    margin: 0px;
+}
+
+.a2 a {
+    
+    text-decoration: none;
+    color: #ffffff;   
+}
+
+
+.a3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    border-radius: 0px 0px 7px 7px;
+
+    font-size: 13px;
+    
+}
+
+.a3:hover {
+    background: var(--cor-btn-bg);
+}
+
+.a3 ul{
+   
+    list-style: none;
+    padding: 0px 10px;
+    margin: 0px;
+}
+
+.a3 a {
+    
+    text-decoration: none;
+    color: #ffffff;   
+}
+
+
+
+#box2 {
+    display: grid;
+    grid-column: 1/4;
+    grid-row: 3/4;
+
+    border-radius: 7px;
+}
+
+.b1 {
+    border-radius: 7px 7px 0px 0px;
+    border: 1px solid var(--cor-btn-border);
+    border-bottom: none;
+    padding: 0px 0px;
+
+}
+
+.b1 ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 0px;
+    margin: 16px;
+    list-style: none;
+    
+}
+
+.b1 a {
+    text-decoration: none;
+    color: var(--cor-btn-text);
+
+}
+
+
+.b2 {
+
+    padding: 16px 32px 32px;
+    margin: 0px 0px -1px;
+    border-radius: 0px 0px 7px 7px;
+    border: 1px solid var(--cor-btn-border);
+    border-top: none;
+
+}
+
+.b2 h1 {
+    color: var(--cor-btn-text);
+    margin: 0px;
+    padding: 0px 0px 10px 0px;
+    border-bottom: 1px solid var(--cor-btn-border);
+}
+
+.b2 p {
+    color: var(--cor-btn-text);
 }
 
 .container-main2 {
@@ -359,66 +566,7 @@ main {
     height: 469px;   
 }
 
-.box1 {
-    display: grid;
-    grid-column: 1/4;
-    grid-row: 2/3;
-
-    border-radius: 7px;
-    border: 1px solid #66ff00;
-}
-
-.a1 {
-    display: flex;
-    padding: 10px;
-    border-radius: 7px 7px 0px 0px;
-    border: 1px solid #000000;
-}
-
-.a1 li {
-    display: flex;
-    justify-content: space-between;
-}
-.a1 img {
-    display: Flex; 
-    width: 24px;
-    height: 24px;
-    border: none;
-    border-radius: 50%;
-}
-.a2 {
-    border: 1px solid #000000;
-}
-.a3 {
-    border-radius: 0px 0px 7px 7px;
-    border: 1px solid #000000;
-}
-
-#box2 {
-    display: grid;
-    grid-column: 1/4;
-    grid-row: 3/4;
-
-    border-radius: 7px;
-    border: 1px solid #ff0000;
-}
-
-.b1 {
-    border-radius: 7px 7px 0px 0px;
-    border: 1px solid #000000;
-}
-
-.b2 {
-    border-radius: 0px 0px 7px 7px;
-    border: 1px solid #000000;
-}
 
 
-.cm1 {
-    display: flex;
-    justify-content: space-between;
-}
 
-.ionicon {
-    
-}
+
