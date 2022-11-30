@@ -247,15 +247,16 @@ nav a {
 /*///////////////////// MAIN ////////////////////*/
 main {
     margin: 0px;
-    padding: 24px 100px;
-    height: auto;
+    padding: 24px 80px;
+  
     border-top: 1px solid var(--cor-btn-border); 
+    
 }
 
 #grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 10vh 25vh 25vh 40vh;
+    grid-template-rows: 5vh 25vh 25vh 10vh;
 
     gap: 20px;
 }
@@ -561,12 +562,123 @@ main {
     grid-row: 1/2;
 
     border-radius: 7px;
-    border: 1px solid #fbff00 ;
-    display: flex;    
-    height: 469px;   
+
+    width: 100%;
+    
+}
+
+.box-grid1 {
+
+    border-bottom: 1px solid var(--cor-btn-border);
+    padding-bottom: 24px;
+
 }
 
 
+.box-grid1 div {
+ 
+    margin-bottom: none; 
+ 
+}
+
+.box-grid1 a {
+    font-size: 14px;
+    text-decoration: none;
+    color: var(--cor-btn-text);
+
+    display: flex;
+    align-items: center;
+    
+}
+
+.box-grid1 svg {
+    margin-right: 7px;
+}
 
 
+h2 {
+    display: flex;
+    justify-content: space-between;
 
+    margin: 0px;
+    padding: 0px;
+    color: #ffffff;
+    font-size: 16px;
+
+}
+
+
+p {
+    color: #ffffff;
+}
+
+
+.box-grid2 {
+    border-bottom: 1px solid var(--cor-btn-border);
+    padding-top: 24px;
+    padding-bottom: 24px;
+ 
+}
+
+
+.box-grid3 {
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.font1 {
+    font-size: 16px;
+    text-decoration: none;
+    margin-bottom: 30px;
+    color: var(--cor-btn-text);
+}
+
+.font1:hover {
+    Color:var(--color-link);
+}
+
+.font2 {
+    font-size: 12px;
+    text-decoration: none;
+    margin-bottom: 10px;
+    color: var(--cor-btn-text);
+}
+
+.font3 {
+    font-size: 12px;
+    text-decoration: none;
+    margin-bottom: 10px;
+    color: var(--color-link);
+}
+
+.font3:hover {
+    text-decoration: underline;
+}
+
+.mt-2 a {
+    margin-bottom: 10px;
+}
+
+footer {
+    text-decoration: none;
+    list-style: none;
+    border-top: 1px solid var(--cor-btn-border); 
+}
+
+nav {
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+}
+
+.mr-3 ul {
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+}
+
+.mr-3 a {
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+}
